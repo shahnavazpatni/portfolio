@@ -1,0 +1,98 @@
+/* CSS Custom Properties for Synthwave Color Palette */
+:root {
+  /* Updated Color Palette */
+  --light-green: #10b981;
+  --medium-purple: #8b5cf6;
+  --light-gray: #9ca3af;
+  --cream: #FBF9D1;
+
+  /* Dark mode only - no light mode */
+  --bg-primary: #0a0a0a;
+  --bg-secondary: #1a1a1a;
+  --text-primary: var(--cream);
+  --text-secondary: var(--light-gray);
+  --accent-primary: var(--medium-purple);
+  --accent-secondary: var(--light-green);
+
+  /* Glassmorphism Variables for Synthwave Theme */
+  --glass-bg: rgba(139, 92, 246, 0.1);
+  --glass-bg-hover: rgba(139, 92, 246, 0.2);
+  --glass-border: rgba(156, 163, 175, 0.2);
+  --glass-shadow: rgba(0, 0, 0, 0.5);
+  --backdrop-blur: 20px;
+
+  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  font-weight: 400;
+  color: var(--text-primary);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  color: var(--text-primary);
+  background: var(--bg-primary);
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+  margin: 0;
+}
+
+/* Synthwave Background */
+/* body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:
+    radial-gradient(ellipse at top, var(--light-green) 0%, transparent 50%),
+    radial-gradient(ellipse at bottom, var(--medium-purple) 0%, transparent 50%),
+    linear-gradient(45deg,
+      var(--bg-primary) 0%,
+      var(--bg-secondary) 25%,
+      var(--bg-primary) 50%,
+      var(--bg-secondary) 75%,
+      var(--bg-primary) 100%);
+  opacity: 0.8;
+  z-index: -2;
+} */
+
+/* Synthwave Grid Pattern */
+/* body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+    linear-gradient(rgba(139, 92, 246, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(139, 92, 246, 0.1) 1px, transparent 1px);
+  background-size: 50px 50px;
+  opacity: 0.3;
+  z-index: -1;
+  animation: gridMove 20s linear infinite;
+} */
+
+@keyframes gridMove {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(50px, 50px); }
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
